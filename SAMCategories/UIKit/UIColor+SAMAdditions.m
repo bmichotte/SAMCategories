@@ -288,9 +288,9 @@
 		hex = [hex substringFromIndex:2];
 	}
 	
-	// Invalid if not 3, 6, or 8 characters
+	// Invalid if not 3, 4, 6, or 8 characters
 	NSUInteger length = [hex length];
-	if (length != 3 && length != 6 && length != 8) {
+	if (length != 3 && length != 4 && length != 6 && length != 8) {
 		return nil;
 	}
 	
@@ -301,6 +301,13 @@
 		NSString *b = [hex substringWithRange:NSMakeRange(2, 1)];
 		hex = [NSString stringWithFormat:@"%@%@%@%@%@%@ff",
 			   r, r, g, g, b, b];
+    } else if (length == 4) {
+        NSString *a = [hex substringWithRange:NSMakeRange(0, 1)];
+        NSString *r = [hex substringWithRange:NSMakeRange(1, 1)];
+		NSString *g = [hex substringWithRange:NSMakeRange(2, 1)];
+		NSString *b = [hex substringWithRange:NSMakeRange(3, 1)];
+		hex = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@",
+			   r, r, g, g, b, b, a, a];
 	} else if (length == 6) {
 		hex = [hex stringByAppendingString:@"ff"];
 	}

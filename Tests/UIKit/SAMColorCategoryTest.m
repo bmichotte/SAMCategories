@@ -68,16 +68,19 @@
 - (void)testColorWithHex {
 	UIColor *red = [UIColor redColor];
 	STAssertEqualObjects(red, [UIColor sam_colorWithHex:@"f00"], nil);
+	STAssertEqualObjects(red, [UIColor sam_colorWithHex:@"ff00"], nil);
 	STAssertEqualObjects(red, [UIColor sam_colorWithHex:@"ff0000"], nil);
 	STAssertEqualObjects(red, [UIColor sam_colorWithHex:@"ff0000ff"], nil);
 	
 	UIColor *green = [UIColor greenColor];
 	STAssertEqualObjects(green, [UIColor sam_colorWithHex:@"0f0"], nil);
+	STAssertEqualObjects(green, [UIColor sam_colorWithHex:@"f0f0"], nil);
 	STAssertEqualObjects(green, [UIColor sam_colorWithHex:@"00ff00"], nil);
 	STAssertEqualObjects(green, [UIColor sam_colorWithHex:@"00ff00ff"], nil);
 	
 	UIColor *blue = [UIColor blueColor];
 	STAssertEqualObjects(blue, [UIColor sam_colorWithHex:@"00f"], nil);
+	STAssertEqualObjects(blue, [UIColor sam_colorWithHex:@"f00f"], nil);
 	STAssertEqualObjects(blue, [UIColor sam_colorWithHex:@"0000ff"], nil);
 	STAssertEqualObjects(blue, [UIColor sam_colorWithHex:@"0000ffff"], nil);
 	
