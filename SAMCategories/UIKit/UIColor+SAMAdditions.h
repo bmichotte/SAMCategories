@@ -72,7 +72,7 @@
  
  @return An UIColor object containing a value.
  
- You can specify hex values in the following formats: `rgb`, `rrggbb`, or `rrggbbaa`.
+ You can specify hex values in the following formats: `rgb`, `argb`, `rrggbb`, or `rrggbbaa`.
  
  The default alpha value is `1.0`.
  
